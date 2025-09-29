@@ -22,3 +22,12 @@
 #     print('Принадлежит диапоазону [10;50]')
 # else:
 #     print('Не принадлежит диапазону [10;50]')
+
+# import random
+# from string import * 
+# letters = ''.join(random.choices(ascii_uppercase, k=3))
+# numbers = ''.join(random.choices('0123456789',  k=3))
+# symbols = ''.join(random.choices('!@#$%^&*', k=2))
+# p = list(letters+numbers+symbols)
+# random.shuffle(p)
+# print(''.join(p))
