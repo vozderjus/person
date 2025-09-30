@@ -41,10 +41,11 @@
 
 # print('\n'.join(f'{i[0]}: {i[1]}' for i in sorted(counts.items(), key=lambda x: x[1], reverse=True)[:3]))
 
+# йоу
 
 #6
 # n = int(input())
 # s = ''
 # for i in range(1,n + 1):
-#     s = s + str(i)
+#     s = s + str(i) 
 # print(s[n-1])
