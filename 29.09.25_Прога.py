@@ -33,19 +33,28 @@
 # print(''.join(p))
 
 #4
+# from collections import Counter
+
 # s = input().lower()
+# count = Counter(s)
 
-# counts = dict()
-# for i in s:
-#     counts[i] = counts.get(i, 0) + 1
+# print(count)
+# print(count.most_common(3))
 
-# print('\n'.join(f'{i[0]}: {i[1]}' for i in sorted(counts.items(), key=lambda x: x[1], reverse=True)[:3]))
-
-# йоу
+#5
+# n = int(input())
+# p = []
+# check = [True] * (n + 1)
+# for i in range(2, n + 1):
+#     if check[i]:
+#         p.append(i)
+#         for j in range(i * 2, n + 1, i):
+#             check[j] = False
+# print(p)
 
 #6
 # n = int(input())
 # s = ''
 # for i in range(1,n + 1):
-#     s = s + str(i) 
+#     s = s + str(i)
 # print(s[n-1])
