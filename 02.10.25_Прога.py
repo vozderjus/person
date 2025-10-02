@@ -78,3 +78,40 @@
 
 # print(check_winners(scores, student_score))
 
+# # пироженки и коробочки
+# def print_pack_report(n):
+#     for i in range(n, 0, -1):
+#         if i % 15 == 0:
+#             print(str(i) + '- Расфасуем по три или по пять')
+#         elif i % 5 == 0 and i % 3 != 0:
+#             print(str(i) + '- Расфасуем по пять')
+#         elif i % 5 != 0 and i % 3 == 0:
+#             print(str(i) + '- Расфасуем по 3')
+#         else:
+#             print(str(i) + '- не заказываем!')
+# print(print_pack_report(int(input())))
+
+# # сложные пароли
+
+# еще подумать надо
+
+
+# # Римский конвертер
+
+# nums = {
+#     'I': 1,
+#     'V': 5,
+#     'X': 10,
+#     'L': 50,
+#     'C': 100,
+#     'D': 500,
+#     'M': 1000
+# }
+# print('Программа принимает только одно число')
+# n = input()
+# def perevod(n):
+#     answer = 0
+#     for i in n:
+#         answer += nums.get(i)
+#     return answer
+# print(perevod(n))
