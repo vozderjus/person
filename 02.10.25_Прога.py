@@ -92,13 +92,45 @@
 # print(print_pack_report(int(input())))
 
 # # сложные пароли
-
-# еще подумать надо
-
+# import random 
+# from string import *
+# def password(a, length):
+#     answer = ''
+#     if length < len(a):
+#         return 'Вы ввели длину меньше, чем возможное количество различных символов!'
+#     n = length // len(a) #сколько символов точно влезает
+#     ost = length % len(a)
+#     for i in a:
+#         if ost > 0:
+#             answer += ''.join(random.choices(i, k=n+1))
+#         else:
+#             answer += ''.join(random.choices(i, k=n))
+#         ost -= 1
+#     answer = list(answer)
+#     random.shuffle(answer)
+#     return ''.join(answer)
+    
+# print('Введите длину желаемого пароля: ')
+# length = int(input())
+# a = []
+# print('Добавить верхний регистр? (0/1)')
+# if int(input()) == 1:
+#     a.append(ascii_uppercase)
+# print('Добавить нижний регистр? (0/1)')
+# if int(input()) == 1:
+#     a.append(ascii_lowercase)
+# print('Добавить символы? (0/1)')
+# if int(input()) == 1:
+#     a.append('!@#$%^&*')
+# print('Добавить цифры? (0/1)')
+# if int(input()) == 1:
+#     a.append('0123456789')
+# print(password(a, length))
 
 # # Римский конвертер
 
 # nums = {
+#     '0': 0,
 #     'I': 1,
 #     'V': 5,
 #     'X': 10,
@@ -107,11 +139,63 @@
 #     'D': 500,
 #     'M': 1000
 # }
+# def r_to_a(n):
+#     answer = 0
+#     n = '0' + n
+#     for i in range(len(n) - 1):
+        
+#         if nums.get(n[i]) > nums.get(n[i + 1]):
+#             answer -= nums.get(n[i + 1])
+#         else:
+#             answer += nums.get(n[i + 1])
+#     return answer
+
+# def a_to_r(n):
+#     if n < 1 or n > 3999:
+#         return "Только числа от 1 до 3999"
+    
+#     thousands = n // 1000
+#     hundreds = (n % 1000) // 100
+#     tens = (n % 100) // 10
+#     ones = n % 10
+    
+#     result = ""
+    
+#     result += "M" * thousands
+    
+#     if hundreds == 9:
+#         result += "CM"
+#     elif hundreds >= 5:
+#         result += "D" + "C" * (hundreds - 5)
+#     elif hundreds == 4:
+#         result += "CD"
+#     else:
+#         result += "C" * hundreds
+    
+#     if tens == 9:
+#         result += "XC"
+#     elif tens >= 5:
+#         result += "L" + "X" * (tens - 5)
+#     elif tens == 4:
+#         result += "XL"
+#     else:
+#         result += "X" * tens
+    
+#     if ones == 9:
+#         result += "IX"
+#     elif ones >= 5:
+#         result += "V" + "I" * (ones - 5)
+#     elif ones == 4:
+#         result += "IV"
+#     else:
+#         result += "I" * ones
+    
+#     return result
+
+
 # print('Программа принимает только одно число')
 # n = input()
-# def perevod(n):
-#     answer = 0
-#     for i in n:
-#         answer += nums.get(i)
-#     return answer
-# print(perevod(n))
+# if n.isdigit():
+#     print(reversed(a_to_r(int(n))))
+# else:
+#     print(r_to_a(n))
